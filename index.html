@@ -382,41 +382,124 @@
   }
 </style>
 
+<style>
+  .flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px; /* Adds 3D effect */
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+
+  .flip-card-front {
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .flip-card-back {
+    background-color: #343a40;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .flip-card-back h4 {
+    margin-bottom: 10px;
+  }
+
+  .flip-card-back p {
+    font-size: 14px;
+  }
+</style>
+
 <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
   <div class="my-auto">
     <h2 class="mb-5">Projects</h2>
     <div class="row">
       <!-- Project 1 -->
       <div class="col-md-4 col-sm-6 mb-4">
-        <div class="thumbnail-container">
-          <a href="https://github.com/Dhruv3sood/project1" target="_blank">
-            <img class="img-fluid rounded" src="Screenshot 2024-11-22 at 2.26.06 AM.png" alt="Project 1">
-          </a>
-          <span class="thumbnail-tooltip">Pocket Tanks | Java, LibGDX, OOPS, In-game mechanics |   Repository
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <!-- Front: Thumbnail -->
+            <div class="flip-card-front">
+              <img src="Screenshot 2024-11-22 at 2.26.06 AM.png" alt="Project 1">
+            </div>
+            <!-- Back: Description -->
+            <div class="flip-card-back">
+              <h4>Project 1</h4>
+              <p>Java, LibGDX, OOPS, In-game mechanics |   Repository
 • Designed a Java-based game inspired by Tank Stars using LibGDX, focusing on Object-Oriented Programming (OOP) and
-Event - Driven programming.</span>
+Event - Driven programming.</p>
+              <a href="https://github.com/Dhruv3sood/project1" target="_blank" style="color: #007bff; text-decoration: underline;">View on GitHub</a>
+            </div>
+          </div>
         </div>
-        <p class="text-center mt-2">Project 1</p>
       </div>
       <!-- Project 2 -->
       <div class="col-md-4 col-sm-6 mb-4">
-        <div class="thumbnail-container">
-          <a href="https://github.com/Dhruv3sood/project2" target="_blank">
-            <img class="img-fluid rounded" src="project2-thumbnail.jpg" alt="Project 2">
-          </a>
-          <span class="thumbnail-tooltip">Description of Project 2</span>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="project2-thumbnail.jpg" alt="Project 2">
+            </div>
+            <div class="flip-card-back">
+              <h4>Project 2</h4>
+              <p>Description of Project 2 goes here.</p>
+              <a href="https://github.com/Dhruv3sood/project2" target="_blank" style="color: #007bff; text-decoration: underline;">View on GitHub</a>
+            </div>
+          </div>
         </div>
-        <p class="text-center mt-2">Project 2</p>
       </div>
       <!-- Project 3 -->
       <div class="col-md-4 col-sm-6 mb-4">
-        <div class="thumbnail-container">
-          <a href="https://github.com/Dhruv3sood/project3" target="_blank">
-            <img class="img-fluid rounded" src="project3-thumbnail.jpg" alt="Project 3">
-          </a>
-          <span class="thumbnail-tooltip">Description of Project 3</span>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="project3-thumbnail.jpg" alt="Project 3">
+            </div>
+            <div class="flip-card-back">
+              <h4>Project 3</h4>
+              <p>Description of Project 3 goes here.</p>
+              <a href="https://github.com/Dhruv3sood/project3" target="_blank" style="color: #007bff; text-decoration: underline;">View on GitHub</a>
+            </div>
+          </div>
         </div>
-        <p class="text-center mt-2">Project 3</p>
       </div>
     </div>
   </div>
