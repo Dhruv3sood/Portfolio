@@ -103,8 +103,16 @@ section.resume-section {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important; } }
 
+/* .bg-primary {
+  background-color: #BD5D38 !important; } */
+
 .bg-primary {
-  background-color: #BD5D38 !important; }
+  background-image: url('images/your-image.jpg');  /* Replace with your actual image path */
+  background-size: cover;  /* Ensures the image covers the full area */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat;  /* Prevents the image from repeating */
+}
+
 
 .text-primary {
   color: #BD5D38 !important; }
