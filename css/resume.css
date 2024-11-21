@@ -107,7 +107,7 @@ section.resume-section {
   background-color: #BD5D38 !important; } */
 
 .bg-primary {
-  background-image: src="img/hero-bg.jpg";  /* Replace with your actual image path */
+  background-image: url('img/hero-bg.jpg');  /* Replace with your actual image path */
   background-size: cover;  /* Ensures the image covers the full area */
   background-position: right center;  /* Centers the image */
   background-repeat: no-repeat;  /* Prevents the image from repeating */
