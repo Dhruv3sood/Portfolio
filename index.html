@@ -10,8 +10,6 @@
 
     <title>Dhruv Sood</title>
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -356,230 +354,158 @@
 </section>
       
 <style>
-  /* The flip card container */
-  .flip-card {
-    background-color: transparent;
-    width: 400px; /* Increased width */
-    height: 300px; /* Increased height */
-    margin: 20px;
-    perspective: 1000px;
-  }
+        /* The flip card container */
+    .flip-card {
+      background-color: transparent;
+      width: 350px;
+      height: 250px;
+      margin: 20px;
+      perspective: 1000px;
+    }
 
-  /* Front and back sides of the card */
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-  }
+    /* Front and back sides of the card */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
 
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
 
-  /* Front side of the card */
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
+    /* Front side of the card */
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
 
-  .flip-card-front {
-    background-color: #bbb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
+    /* Front side styles */
+    .flip-card-front {
+      background-color: #bbb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
 
-  .flip-card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-  .flip-card-back {
-    background-color: dodgerblue;
-    color: white;
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Adjust for content alignment */
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-  }
+    /* Back side styles */
+    .flip-card-back {
+      background-color: dodgerblue;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      font-size: 1rem;
+    }
 
-  .flip-card-back h1 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
+    /* Title and Description inside the back of the card */
+    .flip-card-back h1 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
 
-  .flip-card-back p {
-    font-size: 1rem;
-    margin: 5px 0;
-    padding: 0 10px;
-  }
+    .flip-card-back p {
+      font-size: 1rem;
+      margin: 5px 0;
+      padding: 0 10px;
+    }
 
-  .expand-btn, .btn {
-    margin: 10px 0;
-    padding: 10px 20px;
-    background-color: #BD5D38; /* Orange background */
-    color: black; /* Black text */
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
+    /* Expand Button styles */
+    .expand-btn {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: white;
+      color: dodgerblue;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
 
-  .expand-btn:hover, .btn:hover {
-    background-color: #a84e2f; /* Slightly darker orange on hover */
-  }
+    /* Hide detailed description by default */
+    .detailed-description {
+      display: none;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
 
-  .detailed-description {
-    display: none;
-    font-size: 0.9rem;
-    margin-top: 10px;
-  }
+    /* The container for the projects */
+    .project-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-  /* Container for all projects */
-  .project-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-</style>
+    /* Button to link to the project */
+    .btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-decoration: none;
+    }
 
-<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
-  <div class="my-auto">
-    <h2 class="mb-5">Projects</h2>
-    <div class="project-container">
+    /* Button Hover Effect */
+    .btn:hover {
+      background-color: #218838;
+    }
+  </style>
       
-      <!-- Repeat this structure for all 6 projects -->
-
-      <!-- Project 1 -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="project1.jpg" alt="Project 1">
-          </div>
-          <div class="flip-card-back">
-            <h1>Tank Stars Clone</h1>
-            <p>Java, LibGDX, OOPS, In-game mechanics, Event-Driven programming.</p>
-            <div class="detailed-description" id="description-1">
-              <p>This project is a clone of the Tank Stars game, featuring object-oriented principles, dynamic terrain, and customizable multiplayer settings.</p>
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
+    <div class="my-auto">
+      <h2 class="mb-5">Projects</h2>
+      <div class="project-container">
+        <!-- Project 1 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="Screenshot 2024-11-22 at 2.26.06 AM.png" alt="Tanks Stars Clone">
             </div>
-            <button class="expand-btn" onclick="toggleDescription(1)">Expand</button>
-            <a href="https://github.com/Dhruv3sood/Pocket-Tanks" target="_blank" class="btn">View Project</a>
+            <div class="flip-card-back">
+              <h1>Tank Stars Clone</h1>
+              <p>Java, LibGDX, OOPS, In-game mechanics, Event - Driven programming.</p>
+              <button class="expand-btn" onclick="toggleDescription(1)">Expand</button>
+              <div class="detailed-description" id="description-1">
+                <p>This project is a clone of the classic Tank Stars game developed using Java and the LibGDX framework. It features object-oriented principles and event-driven programming techniques to simulate real-time tank battles. Players can control tanks, aim, and fire based on physics, with dynamic terrain and obstacles that impact gameplay. The game also includes multiplayer support and customizable settings.</p>
+              </div>
+              <a href="https://github.com/Dhruv3sood/Pocket-Tanks" target="_blank" class="btn">View Project</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Project 2 -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="project2.jpg" alt="Project 2">
-          </div>
-          <div class="flip-card-back">
-            <h1>Pharmacy Management System</h1>
-            <p>SQL, OLAP queries, Triggers, Database Design.</p>
-            <div class="detailed-description" id="description-2">
-              <p>An online system that manages inventory, sales, and prescriptions for a retail pharmacy with automated reporting and analysis features.</p>
-            </div>
-            <button class="expand-btn" onclick="toggleDescription(2)">Expand</button>
-            <a href="https://github.com/Dhruv3sood/Pharmacy-System" target="_blank" class="btn">View Project</a>
-          </div>
-        </div>
-      </div>
+        <!-- Repeat this structure for the remaining projects -->
 
-      <!-- Project 3 -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="project3.jpg" alt="Project 3">
-          </div>
-          <div class="flip-card-back">
-            <h1>Research Paper Retrieval</h1>
-            <p>Python, HTML, Dense Embeddings, RAG.</p>
-            <div class="detailed-description" id="description-3">
-              <p>A retrieval system using dense embeddings and Vertex AI for summarizing academic papers and generating word clouds.</p>
-            </div>
-            <button class="expand-btn" onclick="toggleDescription(3)">Expand</button>
-            <a href="https://github.com/Dhruv3sood/Research-Papers" target="_blank" class="btn">View Project</a>
-          </div>
-        </div>
       </div>
-
-      <!-- Project 4 -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="project4.jpg" alt="Project 4">
-          </div>
-          <div class="flip-card-back">
-            <h1>Drug Review Analysis</h1>
-            <p>Python, Sentiment Analysis, NLP.</p>
-            <div class="detailed-description" id="description-4">
-              <p>Analyzed drug reviews to predict user sentiment and effectiveness using NLP models and data visualization tools.</p>
-            </div>
-            <button class="expand-btn" onclick="toggleDescription(4)">Expand</button>
-            <a href="https://github.com/Dhruv3sood/Drug-Review-Analysis" target="_blank" class="btn">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 5 -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="project5.jpg" alt="Project 5">
-          </div>
-          <div class="flip-card-back">
-            <h1>Groundwater Quality Prediction</h1>
-            <p>Python, Regression Models, Data Visualization.</p>
-            <div class="detailed-description" id="description-5">
-              <p>Developed a predictive model for groundwater quality using regression algorithms and exploratory data analysis.</p>
-            </div>
-            <button class="expand-btn" onclick="toggleDescription(5)">Expand</button>
-            <a href="https://github.com/Dhruv3sood/Groundwater-Quality" target="_blank" class="btn">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 6 -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="project6.jpg" alt="Project 6">
-          </div>
-          <div class="flip-card-back">
-            <h1>Sketch-to-Fashion</h1>
-            <p>Deep Learning, Computer Vision, Fashion AI.</p>
-            <div class="detailed-description" id="description-6">
-              <p>Created a pipeline that generates fashion designs from sketches using deep learning and image synthesis techniques.</p>
-            </div>
-            <button class="expand-btn" onclick="toggleDescription(6)">Expand</button>
-            <a href="https://github.com/Dhruv3sood/Sketch-to-Fashion" target="_blank" class="btn">View Project</a>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<script>
-  function toggleDescription(projectNumber) {
-    const description = document.getElementById(`description-${projectNumber}`);
-    description.style.display = description.style.display === "none" || description.style.display === "" ? "block" : "none";
-  }
-</script>
+     <script>
+    function toggleDescription(projectNumber) {
+      const description = document.getElementById(`description-${projectNumber}`);
+      description.style.display = description.style.display === "none" || description.style.display === "" ? "block" : "none";
+    }
+  </script>
 
 
 
