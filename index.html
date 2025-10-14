@@ -23,17 +23,17 @@
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/resume.min.css" rel="stylesheet">
+    <link href="css/resume.css" rel="stylesheet">
 
   </head>
 
   <body id="page-top">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="topNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Start Bootstrap</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="1715711267511 800x800.jpeg" alt="">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/images/profile/profile.jpg" alt="">
         </span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,27 +41,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-          </li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#current">Currently Doing</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+          <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#research">Research</a></li> -->
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
         </ul>
       </div>
     </nav>
@@ -70,13 +58,14 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
         <div class="my-auto">
+          <div class="about-content">
           <h1 class="mb-0">Dhruv 
             <span class="text-primary">Sood</span>
           </h1>
           <div class="subheading mb-5">New Delhi · (+91) 7011489011 ·
             <a href="mailto:name@email.com">dhruvsood6@gmail.com</a>
           </div>
-          <p class="mb-5">I am a motivated and passionate individual who loves using technology to solve problems and create innovative solutions. A keen learner and tech enthusiast, I enjoy exploring new tools and combining creativity with technical skills to make an impact.</p>
+            <p class="mb-5"><span id="about-typing" class="typing" data-text="Computer Science graduate from IIIT Delhi with a strong foundation in machine learning, NLP, and software engineering. I’ve built scalable AI systems — from retrieval-augmented generation pipelines and fairness-aware LLM frameworks to end-to-end data-driven applications. Passionate about using technology to solve real-world problems, I combine engineering rigor with creative problem-solving to design impactful and efficient solutions. A curious learner and tech enthusiast, I constantly explore new tools and ideas at the intersection of AI, data, and software systems."></span></p>
           <ul class="list-inline list-social-icons mb-0">
   <li class="list-inline-item">
     <!-- Mail Icon -->
@@ -89,7 +78,7 @@
   </li>
   <li class="list-inline-item">
     <!-- CV/Resume Icon -->
-    <a href="https://drive.google.com/file/d/1MKjzGeVPvzTNeZGRMqek8brtUiqIA7Km/view?usp=sharing" target="_blank">
+    <a href="https://drive.google.com/file/d/1nYE91WWAICltD-EzuvZRUCPKuU_9RK5T/view" target="_blank">
       <span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
@@ -115,9 +104,56 @@
     </a>
   </li>
 </ul>
+          </div>
 
         </div>
       </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="current">
+        <div class="my-auto">
+          <h2 class="mb-5">Currently Doing</h2>
+          <div class="current-grid">
+            <div class="current-card current-active">
+              <h3><span class="badge-dot"></span>AI Agent Simulations</h3>
+              <p>Working on AI agents for targeted Monte Carlo simulations bias across Indian socio context for healthcare and judiciary domains.</p>
+            </div>
+            <div class="current-card current-active">
+              <h3><span class="badge-dot"></span>Text-to-SQL Agents</h3>
+              <p>Working on text-to-SQL using agentic workflows and novel frameworks.</p>
+            </div>
+            <div class="current-card">
+              <h3><span class="badge-dot"></span>AIISC</h3>
+              <p>LLM fairness &amp; constitutional alignment; dataset creation and evaluations.</p>
+              <div class="research-detail">
+                <p><strong>A Multi-level Bias Elimination through a Decoding Approach with Knowledge Augmentation for Robust Constitutional Alignment of Language Models</strong></p>
+                <p><span class="badge-dot"></span>MIT Tech Review, TACL Review</p>
+              </div>
+            </div>
+            <div class="current-card">
+              <h3><span class="badge-dot"></span>Probo</h3>
+              <p>Production RAG systems, Microservices Architecture, API-level SQL converters</p>
+            </div>
+            <!-- <div class="current-card">
+              <h3><span class="badge-dot"></span>Tav Labs</h3>
+              <p>BioBERT + t-SNE cohorting pipelines over 8k+ oncology datasets.</p>
+              <div class="research-detail">
+                <p><strong>A novel framework integrating cancer research datasets through semantic embeddings, ontology mapping, and similarity scoring to enable interoperable, data-rich medical AI.</strong></p>
+                <p><span class="badge-dot"></span>Journal Submission</p>
+              </div>
+            </div>
+            <div class="current-card">
+              <h3><span class="badge-dot"></span>AMS Lab</h3>
+              <p>Intra-oral monitoring research with ML signal processing.</p>
+              <div class="research-detail">
+                <p><strong>Smart orthodontic compliance monitoring using wireless sensors and machine learning–based wear time recognition</strong></p>
+                <p><span class="badge-dot"></span>IEEE, RIISE</p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
         <div class="my-auto">
@@ -125,8 +161,39 @@
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
+              <h3 class="mb-0">AI Research Intern</h3>
+              <div class="subheading mb-3">Artificial Intelligence Institute of South Carolina USA (Remote) {Dr. Amitava Das}</div>
+              <ul>
+            <li>Collaborating with Prof. Amitava Das on LLM Fairness Framework targeting caste and religious bias mitigation in Indian socio-cultural contexts; developing novel bias detection algorithms for constitutional AI alignment</li>
+            <li>Curated comprehensive AI Constitution dataset with 46K prompts spanning diverse religious and caste identities; benchmarked GPT-4, LLaMA, and Indic-specific language models for bias consistency evaluation</li>
+            <li>AMBEDKAR: A Multi-level Bias Elimination through a Decoding Approach with Knowledge Augmentation for Robust Constitutional Alignment of Language Models (Under review at TACL 2026) — arXiv:2509.02133</li>
+          </ul>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Feb 2025 – Present</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Software Engineer</h3>
+              <div class="subheading mb-3">Probo</div>
+              <ul>
+            <li>Architected production-grade RAG multi-agent chatbot system with Server-Sent Events, entity extraction algorithms, and real-time widgets; delivered 35% surge in user engagement and page visit metrics</li>
+            <li>Engineered high-performance retrieval infrastructure featuring API-level SQL converters and OpenSearch integration; accelerated query response times from 1.5s to 60ms (96% performance boost) serving production traffic</li>
+            <li>Spearheaded News Content Platform with autonomous content generation pipeline and SEO optimization; scaled platform to serve 3K+ daily active users with intelligent recommendation algorithms</li>
+            <li>Orchestrated intelligent Apache Airflow ETL pipelines processing 100K+ financial records daily; established automated 10-minute update cycles for CPI/CFPI metrics with comprehensive monitoring</li>
+          </ul>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Jan 2025 – Sept 2025</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
               <h3 class="mb-0">Research Intern</h3>
-              <div class="subheading mb-3">Tav Labs, IIITD (Dr. Tavpritesh Sethi)</div>
+              <div class="subheading mb-3">Tav Labs, IIITD {Dr. Tavpritesh Sethi}</div>
               <ul>
             <li>Preprocessed 8000 cancer datasets for the Integrated Healthcare Platform, enabling clustering of similar datasets through dimensionality reduction techniques</li>
             <li>Conducted data cleaning, integration, and clustering using BioBERT embeddings and t-SNE visualization, facilitating near-instant identification of similar datasets, thereby eliminating manual review and accelerating data integration</li>
@@ -139,30 +206,30 @@
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Summer Intern</h3>
-              <div class="subheading mb-3">National Stock Exchange (NSE INDIA)</div>
+              <h3 class="mb-0">ML Engineering Intern</h3>
+              <div class="subheading mb-3">National Stock Exchange (NSE India), New Delhi, India</div>
               <ul>
-            <li>Developed a scalable Retrieval-Augmented Generation (RAG) system using Qdrant and LlamaIndex, automating the retrieval of NSE circulars via the NSE API</li>
-            <li>Integrated data into a vector database to enable hybrid search, significantly reducing manual processing and improving data retrieval efficiency by 50%</li>
+            <li>Designed enterprise-scale Retrieval-Augmented Generation system with Qdrant vector database and LlamaIndex orchestration; enhanced regulatory document retrieval accuracy by 50% while eliminating manual processing overhead</li>
+            <li>Deployed 10K+ financial regulatory documents into vector database with hybrid search capabilities; accelerated information retrieval efficiency by 50% through semantic similarity and keyword matching fusion</li>
           </ul>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">May 2024 - July 2024</span>
+              <span class="text-primary">May 2024 - Jul 2024</span>
             </div>
           </div>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Research Intern</h3>
-              <div class="subheading mb-3">AMS Lab, IIITD (Dr. Sujay Deb)</div>
+              <div class="subheading mb-3">AMS Lab, IIITD {Dr. Sujay Deb}</div>
               <ul>
-              <li>Presented in IEEE-ISES 2024 and RIISE 2024</li>
-            <li>Collaborating with orthodontists to develop an intra-oral monitoring system for real-time oral health tracking</li>
-            <li>Increased wear time reporting accuracy by 23% with 98% precision in varied intra-oral conditions</li>
+            <li>Collaborated with orthodontists to develop an intra-oral monitoring system, researching sensors and creating a prototype</li>
+            <li>Integrated circuitry and programming for real-time tracking, increasing wear time reporting accuracy by 23%</li>
+            <li>Achieved 98% precision in varied intra-oral conditions, enhancing oral health monitoring metrics</li>
           </ul>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary"> Feb 2024 - Present</span>
+              <span class="text-primary">Feb 2024 - Present</span>
             </div>
           </div>
 
@@ -184,6 +251,8 @@
 
       </section>
 
+      
+
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
         <div class="my-auto">
           <h2 class="mb-5">Education</h2>
@@ -196,7 +265,7 @@
               <p>CGPA: 8.14</p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">Dec 2021 - May 2025 (expected)</span>
+              <span class="text-primary">Dec 2021 - May 2025 </span>
             </div>
           </div>
 
@@ -218,66 +287,92 @@
   <div class="my-auto">
     <h2 class="mb-5">Skills</h2>
     
-    <!-- Programming Languages -->
-    <div class="subheading mb-3">Programming Languages</div>
-    <ul class="list-inline list-icons">
-      <li class="list-inline-item">
-        <img src="python.svg" style="width: 60px; height: 60px;" alt="Python">
-      </li>
-      <li class="list-inline-item">
-        <img src="Cpp Vector Icon.svg" style="width: 60px; height: 60px;" alt="C++">
-      </li>
-      <li class="list-inline-item">
-        <img src="Java 4 Logo.svg" style="width: 60px; height: 60px;" alt="Java">
-      </li>
-      <li class="list-inline-item">
-        <img src="R Programming Icon.svg" style="width: 60px; height: 60px;" alt="R Programming">
-      </li>
-    </ul>
+    <div class="skills-grid">
+      <div class="skills-group">
+        <div class="group-title">Programming Languages</div>
+        <div class="skill-badges">
+          <span class="skill-badge"><img src="assets/icons/python.svg" alt="Python" style="width:16px;height:16px;">Python</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Java</span>
+          <span class="skill-badge"><img src="assets/icons/Cpp Vector Icon.svg" alt="C++" style="width:16px;height:16px;">C++</span>
+          <span class="skill-badge"><span class="badge-dot"></span>C</span>
+          <span class="skill-badge"><span class="badge-dot"></span>SQL</span>
+          <span class="skill-badge"><span class="badge-dot"></span>TypeScript</span>
+        </div>
+      </div>
 
-    <!-- Tools & Platforms -->
-    <div class="subheading mb-3">Tools &amp; Platforms</div>
-    <ul class="list-inline list-icons">
-      <li class="list-inline-item">
-        <img src="Linux Vector Icon.svg" style="width: 60px; height: 60px;" alt="Linux">
-      </li>
-      <li class="list-inline-item">
-        <img src="MacOS Vector Icon.svg" style="width: 60px; height: 60px;" alt="macOS">
-      </li>
-      <li class="list-inline-item">
-        <img src="MySQL Vector Icon.svg" style="width: 60px; height: 60px;" alt="MySQL">
-      </li>
-      <li class="list-inline-item">
-        <img src="Git SVG Icon.svg" style="width: 60px; height: 60px;" alt="Git">
-      </li>
-      <li class="list-inline-item">
-        <img src="Jupyter SVG Icon.svg" style="width: 60px; height: 60px;" alt="Jupyter">
-      </li>
-      <li class="list-inline-item">
-        <img src="Latex SVG Icon.svg" style="width: 60px; height: 60px;" alt="LaTeX">
-      </li>
-      <li class="list-inline-item">
-        <img src="Numpy Vector Icon.svg" style="width: 60px; height: 60px;" alt="NumPy">
-      </li>
-      <li class="list-inline-item">
-        <img src="Pandas SVG Icon.svg" style="width: 60px; height: 60px;" alt="Pandas">
-      </li>
-      <li class="list-inline-item">
-        <img src="Scikit-learn SVG Icon.svg" style="width: 60px; height: 60px;" alt="Scikit-learn">
-      </li>
-      <li class="list-inline-item">
-        <img src="Hugging Face SVG Icon.svg" style="width: 60px; height: 60px;" alt="Hugging Face">
-      </li>
-      <li class="list-inline-item">
-        <img src="Figma Vector Icon.svg" style="width: 60px; height: 60px;" alt="Figma">
-      </li>
-      <li class="list-inline-item">
-        <img src="VS Code Icon.svg" style="width: 60px; height: 60px;" alt="Visual Studio Code">
-      </li>
-      <li class="list-inline-item">
-        <img src="Selenium SVG Icon.svg" style="width: 60px; height: 60px;" alt="Selenium">
-      </li>
-    </ul>
+      <div class="skills-group">
+        <div class="group-title">Machine Learning &amp; AI</div>
+        <div class="skill-badges">
+          <span class="skill-badge"><span class="badge-dot"></span>PyTorch</span>
+          <span class="skill-badge"><span class="badge-dot"></span>TensorFlow</span>
+          <span class="skill-badge"><img src="assets/icons/Scikit-learn SVG Icon.svg" alt="scikit-learn" style="width:16px;height:16px;">scikit-learn</span>
+          <span class="skill-badge"><span class="badge-dot"></span>LangChain</span>
+          <span class="skill-badge"><span class="badge-dot"></span>LangGraph</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Neural Networks</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Deep Learning</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <div class="group-title">Data Science &amp; Analytics</div>
+        <div class="skill-badges">
+          <span class="skill-badge"><img src="assets/icons/Numpy Vector Icon.svg" alt="NumPy" style="width:16px;height:16px;">NumPy</span>
+          <span class="skill-badge"><img src="assets/icons/Pandas SVG Icon.svg" alt="Pandas" style="width:16px;height:16px;">Pandas</span>
+          <span class="skill-badge"><span class="badge-dot"></span>SciPy</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Matplotlib</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Librosa</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Statistical Modeling</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Data Mining</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Feature Engineering</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <div class="group-title">Backend &amp; APIs</div>
+        <div class="skill-badges">
+          <span class="skill-badge"><span class="badge-dot"></span>FastAPI</span>
+          <span class="skill-badge"><span class="badge-dot"></span>REST APIs</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Server-Sent Events (SSE)</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Microservices Architecture</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <div class="group-title">Databases &amp; Search</div>
+        <div class="skill-badges">
+          <span class="skill-badge"><img src="assets/icons/MySQL Vector Icon.svg" alt="MySQL" style="width:16px;height:16px;">MySQL</span>
+          <span class="skill-badge"><span class="badge-dot"></span>OpenSearch</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Elasticsearch</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Qdrant Vector Database</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Neo4j</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Database Optimization</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <div class="group-title">DevOps &amp; Cloud</div>
+        <div class="skill-badges">
+          <span class="skill-badge"><span class="badge-dot"></span>Docker</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Kubernetes</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Apache Airflow</span>
+          <span class="skill-badge"><span class="badge-dot"></span>AWS (S3, EC2)</span>
+          <span class="skill-badge"><img src="assets/icons/Git SVG Icon.svg" alt="Git" style="width:16px;height:16px;">Git</span>
+          <span class="skill-badge"><span class="badge-dot"></span>CI/CD</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Kong Gateway</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <div class="group-title">Specialized Tools</div>
+        <div class="skill-badges">
+          <span class="skill-badge"><img src="assets/icons/Selenium SVG Icon.svg" alt="Selenium" style="width:16px;height:16px;">Selenium</span>
+          <span class="skill-badge"><img src="assets/icons/Figma Vector Icon.svg" alt="Figma" style="width:16px;height:16px;">Figma</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Unsloth</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Jina AI</span>
+          <span class="skill-badge"><span class="badge-dot"></span>Devtron</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -362,8 +457,9 @@
   /* The flip card container */
   .flip-card {
     background-color: transparent;
-    width: 400px; /* Increased width */
-    height: 300px; /* Increased height */
+    width: 100%;
+    max-width: 420px; /* Responsive width */
+    height: 380px; /* Taller to allow more content */
     margin: 20px;
     perspective: 1000px;
   }
@@ -410,11 +506,14 @@
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Adjust for content alignment */
-    align-items: center;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 10px;
     padding: 20px;
     box-sizing: border-box;
-    text-align: center;
+    text-align: left;
+    overflow-y: auto; /* Allow long descriptions to scroll */
+    -webkit-overflow-scrolling: touch;
   }
 
   .flip-card-back h1 {
@@ -465,12 +564,19 @@
     <div class="project-container">
       
       <!-- Repeat this structure for all 6 projects -->
-
       <!-- Project 1 -->
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="Screenshot 2024-11-22 at 2.26.06 AM.png" alt="Project 1">
+            <img src="assets/images/projects/tank-stars.png" alt="Project 1">
+            <div class="project-caption">
+              <h3>Tank Stars Clone</h3>
+              <div class="project-tags">
+                <span class="project-tag">Java</span>
+                <span class="project-tag">LibGDX</span>
+                <span class="project-tag">OOP</span>
+              </div>
+            </div>
           </div>
           <div class="flip-card-back">
             <h1>Tank Stars Clone</h1>
@@ -488,7 +594,15 @@
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="Screenshot 2024-11-23 at 7.05.45 AM.png" alt="Project 2">
+            <img src="assets/images/projects/pharmacy-system.png" alt="Project 2">
+            <div class="project-caption">
+              <h3>Pharmacy Management System</h3>
+              <div class="project-tags">
+                <span class="project-tag">SQL</span>
+                <span class="project-tag">Triggers</span>
+                <span class="project-tag">OLAP</span>
+              </div>
+            </div>
           </div>
           <div class="flip-card-back">
             <h1>Pharmacy Management System</h1>
@@ -497,7 +611,7 @@
               <p>An online database management system that manages inventory, sales, and prescriptions for a retail pharmacy incorporated with olap queries and trigger systems.</p>
             </div>
             <button class="expand-btn" onclick="toggleDescription(2)">Expand</button>
-            <a href="https://github.com/Dhruv3sood/Pharmacy-System" target="_blank" class="btn">View Project</a>
+            <a href="https://github.com/Dhruv3sood/Postmeds" target="_blank" class="btn">View Project</a>
           </div>
         </div>
       </div>
@@ -506,7 +620,15 @@
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="Screenshot 2024-11-22 at 4.47.16 AM.png" alt="Project 3">
+            <img src="assets/images/projects/resume-matcher.png" alt="Project 3">
+            <div class="project-caption">
+              <h3>Resume Job Matching</h3>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">BERT</span>
+                <span class="project-tag">IR</span>
+              </div>
+            </div>
           </div>
           <div class="flip-card-back">
             <h1>Resume Job Matching Platform</h1>
@@ -525,7 +647,15 @@ precision, recall, and F1 scores between 0.98 and 0.99. Integrated a resume opti
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="Screenshot 2024-11-22 at 4.47.50 AM.png" alt="Project 4">
+            <img src="assets/images/projects/amazon-toolset.png" alt="Project 4">
+            <div class="project-caption">
+              <h3>Amazon Toolset</h3>
+              <div class="project-tags">
+                <span class="project-tag">LLM</span>
+                <span class="project-tag">CF</span>
+                <span class="project-tag">CNN</span>
+              </div>
+            </div>
           </div>
           <div class="flip-card-back">
             <h1>Toolset Based on Amazon Dataset</h1>
@@ -549,7 +679,14 @@ custom DataLoader classes and optimizing hyperparameters.</li></ul>
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="Screenshot 2024-11-22 at 4.49.37 AM.png" alt="Project 5">
+            <img src="assets/images/projects/signal-separation.png" alt="Project 5">
+            <div class="project-caption">
+              <h3>Signal Separation</h3>
+              <div class="project-tags">
+                <span class="project-tag">DSP</span>
+                <span class="project-tag">ML</span>
+              </div>
+            </div>
           </div>
           <div class="flip-card-back">
             <h1>Signal Source Seperation</h1>
@@ -567,7 +704,15 @@ custom DataLoader classes and optimizing hyperparameters.</li></ul>
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="Screenshot 2024-11-22 at 4.48.55 AM.png" alt="Project 6">
+            <img src="assets/images/projects/unix-shell.png" alt="Project 6">
+            <div class="project-caption">
+              <h3>Unix Shell System</h3>
+              <div class="project-tags">
+                <span class="project-tag">OS</span>
+                <span class="project-tag">CLI</span>
+                <span class="project-tag">Threads</span>
+              </div>
+            </div>
           </div>
           <div class="flip-card-back">
             <h1>Unix Shell System</h1>
@@ -578,6 +723,84 @@ commands.</p>
             </div>
             <button class="expand-btn" onclick="toggleDescription(6)">Expand</button>
             <a href="https://github.com/Dhruv3sood/OS_assignment2" target="_blank" class="btn">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="assets/images/projects/pnl-tracker.png" alt="Project 7">
+            <div class="project-caption">
+              <h3>PnL Tracker</h3>
+              <div class="project-tags">
+                <span class="project-tag">FastAPI</span>
+                <span class="project-tag">Backend</span>
+                <span class="project-tag">Python</span>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <h1>PnL Tracker</h1>
+            <p>FastAPI, Backend, Python, FIFO Accounting, Decimal Safety</p>
+            <div class="detailed-description" id="description-7">
+              <p>A small, clean backend that records trades, shows current portfolio, and computes realized & unrealized PnL. Single-user, in-memory, FIFO accounting with Decimal safety and a simple FastAPI surface.</p>
+            </div>
+            <button class="expand-btn" onclick="toggleDescription(7)">Expand</button>
+            <a href="https://github.com/Dhruv3sood/PnL_tracker" target="_blank" class="btn">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 8 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="assets/images/projects/groundwater-analysis.png" alt="Project 8">
+            <div class="project-caption">
+              <h3>Groundwater Quality Analysis</h3>
+              <div class="project-tags">
+                <span class="project-tag">R</span>
+                <span class="project-tag">Regression</span>
+                <span class="project-tag">Statistics</span>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <h1>Groundwater Quality Analysis</h1>
+            <p>R, RStudio, Kuznets Curve, Regression Analysis, Statistical Testing</p>
+            <div class="detailed-description" id="description-8">
+              <p>Formulated a robust multiple regression model to explore groundwater quality and socio-economic impact, establishing insights for sustainable development. Presented findings and statistical tests through detailed reports to support data-driven decision-making.</p>
+            </div>
+            <button class="expand-btn" onclick="toggleDescription(8)">Expand</button>
+            <a href="https://github.com/Dhruv3sood/groundwater_regression" target="_blank" class="btn">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 9 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="assets/images/projects/skin-lesion-detection.png" alt="Project 9">
+            <div class="project-caption">
+              <h3>Skin Lesion Detection</h3>
+              <div class="project-tags">
+                <span class="project-tag">Deep Learning</span>
+                <span class="project-tag">CNN</span>
+                <span class="project-tag">HAM10000</span>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <h1>Skin Lesion Detection</h1>
+            <p>Deep Learning, CNN, HAM10000, Jupyter, Medical AI</p>
+            <div class="detailed-description" id="description-9">
+              <p>Built a deep learning model to classify skin lesions using the HAM10000 dataset, focusing on distinguishing between benign and malignant types, with a web interface for real-time analysis.</p>
+            </div>
+            <button class="expand-btn" onclick="toggleDescription(9)">Expand</button>
+            <a href="https://github.com/Dhruv3sood/SkinLesionAnalyser" target="_blank" class="btn">View Project</a>
           </div>
         </div>
       </div>
@@ -607,7 +830,7 @@ commands.</p>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
+    <script src="js/resume.js"></script>
 
   </body>
 
