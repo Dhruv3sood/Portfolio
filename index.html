@@ -112,57 +112,83 @@
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="current">
         <div class="my-auto">
           <h2 class="mb-5">Currently Doing</h2>
-          <div class="current-grid">
-            <div class="current-card current-active">
-              <h3><span class="badge-dot"></span>RCA Engine at Rocketfrog.ai</h3>
-              <div class="subheading mb-2" style="font-size: 0.9rem; color: #6c757d;">AI Engineer</div>
-              <p>Architected an automated root cause analysis (RCA) engine for a US-based enterprise client using complex LangGraph state-machine topologies to correlate high-dimensional performance metrics and system failures.</p>
-            </div>
-            <div class="current-card">
-              <h3><span class="badge-dot"></span>Stealth Startup</h3>
-              <div class="subheading mb-2" style="font-size: 0.9rem; color: #6c757d;">Technical Lead</div>
-              <p>Helped setting up AWS infrastructure and codebase backend from scratch for a startup on social networking or online friends making application.</p>
-            </div>
-            <div class="current-card">
-              <h3><span class="badge-dot"></span>Bits Goa</h3>
-              <div class="subheading mb-2" style="font-size: 0.9rem; color: #6c757d;">Research Contributor</div>
-              <p>Working on AI agents for targeted Monte Carlo simulations bias across Indian socio context for healthcare and judiciary domains.</p>
-            </div>
-            <div class="current-card">
-              <h3><span class="badge-dot"></span>Text-to-SQL Agents</h3>
-              <div class="subheading mb-2" style="font-size: 0.9rem; color: #6c757d;">Self Research</div>
-              <p>Working on text-to-SQL using agentic workflows and novel frameworks.</p>
-            </div>
-            <div class="current-card">
-              <h3><span class="badge-dot"></span>AIISC</h3>
-              <div class="subheading mb-2" style="font-size: 0.9rem; color: #6c757d;">Research Intern</div>
-              <p>LLM fairness &amp; constitutional alignment; dataset creation and evaluations.</p>
-              <div class="research-detail">
-                <p><strong>A Multi-level Bias Elimination through a Decoding Approach with Knowledge Augmentation for Robust Constitutional Alignment of Language Models</strong></p>
-                <p><span class="badge-dot"></span>MIT Tech Review, TACL Review</p>
+          <div class="tree-container">
+            <svg class="tree-svg" width="100%" height="100%">
+              <line x1="50%" y1="50" x2="50%" y2="95%" class="tree-trunk"></line>
+              
+              <!-- Branches (approximate positions, can be tweaked) -->
+              <!-- Left side branches -->
+              <path d="M 50% 120 Q 30% 120 15% 150" class="tree-branch" fill="none"></path>
+              <path d="M 50% 450 Q 30% 450 15% 480" class="tree-branch" fill="none"></path>
+              <path d="M 50% 780 Q 30% 780 15% 810" class="tree-branch" fill="none"></path>
+              
+              <!-- Right side branches -->
+              <path d="M 50% 280 Q 70% 280 85% 310" class="tree-branch" fill="none"></path>
+              <path d="M 50% 610 Q 70% 610 85% 640" class="tree-branch" fill="none"></path>
+              <path d="M 50% 900 Q 70% 900 85% 930" class="tree-branch" fill="none"></path>
+
+              <!-- Nodes on trunk -->
+              <circle cx="50%" cy="120" r="8" fill="#38BDF8" class="tree-joint"></circle>
+              <circle cx="50%" cy="280" r="8" fill="#38BDF8" class="tree-joint"></circle>
+              <circle cx="50%" cy="450" r="8" fill="#38BDF8" class="tree-joint"></circle>
+              <circle cx="50%" cy="610" r="8" fill="#38BDF8" class="tree-joint"></circle>
+              <circle cx="50%" cy="780" r="8" fill="#38BDF8" class="tree-joint"></circle>
+              <circle cx="50%" cy="900" r="8" fill="#38BDF8" class="tree-joint"></circle>
+            </svg>
+
+            <div class="tree-nodes">
+              <!-- Node 1: Rocketfrog (Left) -->
+              <div class="tree-node active" style="grid-column: 1;">
+                <span class="date-range">Dec 2025 - Present</span>
+                <h3><span class="badge-dot"></span>RCA Engine</h3>
+                <div class="role-title">AI Engineer @ Rocketfrog.ai</div>
+                <p>Architecting an automated root cause analysis engine using complex LangGraph state-machine topologies to correlate high-dimensional performance metrics.</p>
+              </div>
+
+              <!-- Node 2: Stealth Startup (Right) -->
+              <div class="tree-node" style="grid-column: 3;">
+                <span class="date-range">Oct 2025 - Dec 2025</span>
+                <h3><span class="badge-dot"></span>Stealth Startup</h3>
+                <div class="role-title">Technical Lead</div>
+                <p>Built AWS infrastructure and backend from scratch for a social networking application, leading the engineering strategy.</p>
+              </div>
+
+              <!-- Node 3: Bits Goa (Left) -->
+              <div class="tree-node" style="grid-column: 1;">
+                 <span class="date-range">Oct 2025 - Dec 2025</span>
+                <h3><span class="badge-dot"></span>Bits Goa</h3>
+                <div class="role-title">Research Contributor</div>
+                <p>Developing AI agents for targeted Monte Carlo simulations to analyze bias across Indian socio-economic contexts in healthcare and judiciary.</p>
+              </div>
+
+              <!-- Node 4: Text-to-SQL (Right) -->
+              <div class="tree-node" style="grid-column: 3;">
+                <span class="date-range">Self Research</span>
+                <h3><span class="badge-dot"></span>Text-to-SQL Agents</h3>
+                <div class="role-title">Independent Research</div>
+                <p>Investigating novel frameworks for Text-to-SQL generation using advanced agentic workflows and semantic parsing.</p>
+              </div>
+
+              <!-- Node 5: AIISC (Left) -->
+              <div class="tree-node" style="grid-column: 1;">
+                <span class="date-range">Feb 2025 - Oct 2025</span>
+                <h3><span class="badge-dot"></span>AIISC</h3>
+                <div class="role-title">Research Intern</div>
+                <p>LLM fairness & constitutional alignment. focusing on dataset creation and rigorous evaluations.</p>
+                <div class="research-detail">
+                  <p><strong>Paper: A Multi-level Bias Elimination through a Decoding Approach with Knowledge Augmentation for Robust Constitutional Alignment of Language Models</strong></p>
+                  <p><span class="badge-dot"></span>MIT Tech Review | Under Review: TACL 2026</p>
+                </div>
+              </div>
+
+              <!-- Node 6: Probo (Right) -->
+              <div class="tree-node" style="grid-column: 3;">
+                <span class="date-range">Jan 2025 - Sept 2025</span>
+                <h3><span class="badge-dot"></span>Probo</h3>
+                <div class="role-title">Software Engineer</div>
+                <p>Engineered production multi-agent RAG systems and higher-performance microservices, creating API-level SQL converters.</p>
               </div>
             </div>
-            <div class="current-card">
-              <h3><span class="badge-dot"></span>Probo</h3>
-              <div class="subheading mb-2" style="font-size: 0.9rem; color: #6c757d;">Software Engineer</div>
-              <p>Production multi-agent RAG systems, Microservices Architecture, API-level SQL converters</p>
-            </div>
-            <!-- <div class="current-card">
-              <h3><span class="badge-dot"></span>Tav Labs</h3>
-              <p>BioBERT + t-SNE cohorting pipelines over 8k+ oncology datasets.</p>
-              <div class="research-detail">
-                <p><strong>A novel framework integrating cancer research datasets through semantic embeddings, ontology mapping, and similarity scoring to enable interoperable, data-rich medical AI.</strong></p>
-                <p><span class="badge-dot"></span>Journal Submission</p>
-              </div>
-            </div>
-            <div class="current-card">
-              <h3><span class="badge-dot"></span>AMS Lab</h3>
-              <p>Intra-oral monitoring research with ML signal processing.</p>
-              <div class="research-detail">
-                <p><strong>Smart orthodontic compliance monitoring using wireless sensors and machine learning–based wear time recognition</strong></p>
-                <p><span class="badge-dot"></span>IEEE, RIISE</p>
-              </div>
-            </div> -->
           </div>
         </div>
       </section>
