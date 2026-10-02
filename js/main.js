@@ -38,7 +38,7 @@
   var sources = Array.prototype.slice.call(document.querySelectorAll('[data-start][data-lane]'));
   if (!chart || !sources.length) return;
 
-  var LANES = ['Work', 'Research', 'Projects', 'Education'];
+  var LANES = ['Work', 'Research', 'Education'];
   var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   var DURATION = 2600;
   var HINT = 'Select a bar for details';
@@ -82,7 +82,7 @@
       id: source.id,
       lane: source.dataset.lane,
       label: source.dataset.label,
-      summary: [source.dataset.label, source.dataset.role, range].filter(Boolean).join(' · '),
+      summary: [source.dataset.label, source.dataset.role, range, source.dataset.note].filter(Boolean).join(' · '),
       start: start,
       current: current,
       clipped: start < axisStart,
