@@ -1,6 +1,3 @@
 [build]
-  command = "npm install && npx gulp build"
+  command = "rm -rf dist && mkdir dist && cp -R index.html favicon.ico css js assets dist/"
   publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "22"
