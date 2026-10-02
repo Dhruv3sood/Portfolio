@@ -1,0 +1,6 @@
+dist/
+node_modules/
+.DS_Store
+
+# Original resume (contains phone number); the site serves assets/Dhruv_Sood_Resume.pdf
+Dhruv_Sood_Resume_AI_FDE_detailed.pdf
