@@ -82,8 +82,7 @@
       id: source.id,
       lane: source.dataset.lane,
       label: source.dataset.label,
-      full: source.dataset.labelFull,
-      summary: [source.dataset.labelFull || source.dataset.label, source.dataset.role, range, source.dataset.note].filter(Boolean).join(' · '),
+      summary: [source.dataset.label, source.dataset.role, range, source.dataset.note].filter(Boolean).join(' · '),
       start: start,
       current: current,
       clipped: start < axisStart,
@@ -127,14 +126,12 @@
   foot.appendChild(readout);
   foot.appendChild(replay);
 
-  var lanes = [];
-
   LANES.forEach(function (name) {
     var laneItems = items.filter(function (item) {
       return item.lane === name;
     });
     if (!laneItems.length) return;
-    // Current roles are placed first, so they claim the top rows.
+    // Current roles claim the top rows; anything overlapping drops to the next free row.
     laneItems.sort(function (a, b) {
       return b.current - a.current || a.x0 - b.x0;
     });
@@ -144,18 +141,24 @@
     lane.appendChild(el('span', 'tg-lane-name', name));
     lane.appendChild(track);
 
+    var rows = [];
     laneItems.forEach(function (item) {
+      var row = 0;
+      while (rows[row] && rows[row].some(function (other) {
+        return other.x0 < item.x1 && item.x0 < other.x1;
+      })) row++;
+      (rows[row] = rows[row] || []).push(item);
+
       var link = el('a', 'tg-item');
       link.href = '#' + item.id;
       link.setAttribute('aria-label', item.summary);
       link.style.left = item.x0 * 100 + '%';
       link.style.width = (item.x1 - item.x0) * 100 + '%';
+      link.style.setProperty('--row', row);
       if (item.current) link.classList.add('is-current');
       if (item.clipped) link.classList.add('is-clipped');
 
-      var label = el('span', 'tg-label');
-      var name = el('span', 'tg-name', item.label);
-      label.appendChild(name);
+      var label = el('span', 'tg-label', item.label);
       if (item.clipped) label.appendChild(el('span', 'tg-note', 'since ' + fmt(item.start)));
       link.appendChild(label);
       link.appendChild(el('span', 'tg-fill'));
@@ -173,11 +176,10 @@
 
       item.node = link;
       item.labelNode = label;
-      item.nameNode = name;
       track.appendChild(link);
     });
 
-    lanes.push({ items: laneItems, track: track });
+    track.style.setProperty('--rows', rows.length);
     body.appendChild(lane);
   });
 
@@ -187,67 +189,21 @@
   chart.setAttribute('role', 'group');
   chart.setAttribute('aria-label', 'Career timeline from ' + fmt(axisStart) + ' to now');
 
-  /* Layout: each item takes the first row where its bar and label are clear of
-     its neighbours. A label sits at the bar's start, or ends at the bar's end
-     when it would otherwise cross the "now" line. Items with a longer full name
-     use it when it costs no extra row, or whenever the chart is wide. */
+  /* Layout: labels that would run past the right edge (or, for current roles,
+     past the "now" line) anchor to the bar's end instead. */
 
-  var GAP = 8;
-  var tNow = pos(now);
-
-  function place(item, text, width) {
-    item.nameNode.textContent = text;
-    var left = item.x0 * width;
-    var right = item.x1 * width;
-    var labelWidth = item.labelNode.offsetWidth;
-    var limit = item.current ? right : tNow * width - GAP;
-    var fitsAtStart = left + labelWidth <= limit;
-    var fitsAtEnd = right - labelWidth >= 0;
-    var atEnd = !fitsAtStart && fitsAtEnd;
-    return {
-      text: text,
-      fits: fitsAtStart || fitsAtEnd,
-      atEnd: atEnd,
-      from: atEnd ? Math.min(left, right - labelWidth) : left,
-      to: atEnd ? right : Math.max(right, left + labelWidth)
-    };
-  }
-
-  function freeRow(rows, spot) {
-    var row = 0;
-    while (rows[row] && rows[row].some(function (other) {
-      return other.from < spot.to + GAP && spot.from < other.to + GAP;
-    })) row++;
-    return row;
-  }
-
-  function layout() {
-    var width = cursor.clientWidth;
-    var roomy = width >= 600;
-    lanes.forEach(function (lane) {
-      var rows = [];
-      lane.items.forEach(function (item) {
-        var spot = place(item, item.label, width);
-        var row = freeRow(rows, spot);
-        if (item.full) {
-          var fullSpot = place(item, item.full, width);
-          var fullRow = freeRow(rows, fullSpot);
-          if (fullSpot.fits && (fullRow === row || roomy)) {
-            spot = fullSpot;
-            row = fullRow;
-          }
-        }
-        item.nameNode.textContent = spot.text;
-        item.node.classList.toggle('is-end', spot.atEnd);
-        item.node.style.setProperty('--row', row);
-        (rows[row] = rows[row] || []).push(spot);
-      });
-      lane.track.style.setProperty('--rows', rows.length);
+  function fitLabels() {
+    var edge = cursor.getBoundingClientRect().right;
+    items.forEach(function (item) {
+      item.node.classList.remove('is-end');
+      var limit = item.current ? item.node.getBoundingClientRect().right : edge;
+      if (item.labelNode.getBoundingClientRect().right > limit) item.node.classList.add('is-end');
     });
   }
 
   /* Animation: the playhead sweeps from the axis start to today and bars fill as it passes. */
 
+  var tNow = pos(now);
   var progress = 0;
   var frame = null;
 
@@ -291,7 +247,7 @@
 
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  layout();
+  fitLabels();
   if (reducedMotion || !('IntersectionObserver' in window)) {
     finish();
     replay.hidden = true;
@@ -309,13 +265,13 @@
   replay.addEventListener('click', play);
 
   window.addEventListener('resize', function () {
-    layout();
+    fitLabels();
     if (!frame) render(progress);
   });
 
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(function () {
-      layout();
+      fitLabels();
       if (!frame) render(progress);
     });
   }
